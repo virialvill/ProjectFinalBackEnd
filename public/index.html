@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipes!</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <h1>Recipes!</h1>
+
+    <form action="/api/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="file" accept="image/png" />
+      <input type="text" placeholder="File name" name="filename" />
+      <button type="submit">Upload</button>
+    </form>
+
+    <form id="addForm">
+      <input type="text" placeholder="Recipe Title" name="title" />
+      <input type="text" placeholder="Image" name="image" />
+      <input type="text" placeholder="Recipe Year" name="year" />
+
+      <textarea
+        type="text"
+        placeholder="Description"
+        name="description"
+      ></textarea>
+      <button type="submit">Submit</button>
+    </form>
+
+    <div class="recipes"></div>
+
+    <div class="recipes">
+      <button id="seed">Seed Database</button>
+
+      <h3>API Endpoints</h3>
+
+      <ul>
+        <li>
+          <a href="api/recipes">api/recipes</a>
+        </li>
+        <li><a href="api/killall">api/killall</a></li>
+      </ul>
+    </div>
+
+    <script src="/js/scripts.js"></script>
+  </body>
+</html>
